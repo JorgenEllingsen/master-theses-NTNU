@@ -107,12 +107,14 @@
 
 
 \include{inc/introduction} % includes latex files from the same directory
+\include{inc/background}
 \include{inc/related_work} 
-\include{inc/packages} % could be called Methodology or methods or any filename 
-\include{inc/structure} % could be results
-\include{inc/implementation}
-\include{inc/discussion}
-\include{inc/conclusion}
+\include{inc/solution}
+%\include{inc/packages} 
+%\include{inc/structure} 
+%\include{inc/implementation}
+%\include{inc/discussion}
+%\include{inc/conclusion}
 
 \ifthenelse{\boolean{HarvardCitations}}{%
 	\bibliographystyle{agsm} % used for Harvard style references. Names - Humanities & Interaction Design
@@ -123,7 +125,7 @@
 \bibliography{bibliography}
 
 \appendix
-\include{inc/rawdata}
+%\include{inc/rawdata}
 %\include{inc/timetable}
 
 \end{document}
