@@ -48,3 +48,44 @@ The Tangle, here based on the tangle implementation in IOTA~\cite{IOTA_Whitepape
     \label{fig:tangle}
 \end{figure}
 The web of trust is a public-key authentication system originally built on PGP. A user can build confidence in their identity by having other users sign their public key~\cite{Azouvi2017}. In an identity management system where we distinguish between Users and Service Providers, we can build on this idea. We can look at a scenario where a User has their identity verified and signed by visiting the governmental department issuing passports for their citizens. If the user wants proof that they also have a drivers license, and the issuing body (DMV, Statens Vegvesen, e.g.) trusts that department, they can link a drivers license to that identity based on the verified identity already in the ledger. This opens up for possibilities where the User can visit a small number of Identity Providers and establish a base identity, and then build upon that over the internet.
+
+\subsection{Gossip Protocol}
+https://link.springer.com/chapter/10.1007/978-3-319-14977-6\_28
+
+\section{Available Self-Sovereign Identity Systems}
+\label{sec:ssi_systems}
+\subsection{Sovrin}
+The Sovrin Foundation have set out on a mission to standardize and create an infrastructure for Self-Sovereign identities, using blockchain as storage for Distributed Identities such that anyone can issue or verify it~\cite{sovrin}. The Sovrin blockchain has been designed only for identity, and is taking steps to move the digital trust away from centralized CAs to a web of trust model. The Soverin SSI model is not dependent on any particular distributed ledger, but can work with any blockchain that meets the fundamental principles. Sovrin has implemented their identity system in a specific instantiation of Hyperledger's Indy project.
+\\\\
+https://sovrin.org/wp-content/uploads/Sovrin-Protocol-and-Token-White-Paper.pdf
+\\\\ https://sovrin.org/wp-content/uploads/2017/04/The-Technical-Foundations-of-Sovrin.pdf
+\\\\
+https://www.evernym.com/solution/
+https://www.evernym.com/
+
+\subsection{uPort}
+https://whitepaper.uport.me/uPort\_whitepaper\_DRAFT20170221.pdf
+
+
+\subsection{Civic}
+https://www.civic.com/
+
+\subsection{Comparison}
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+ & Sovrin & uPort & Civic \\
+\hline
+Minable & No & Yes & Yes  \\
+Attribute Segregation & Yes & Yes & Yes \\
+Storage & On-Chain & Off-Chain & On-Device \\
+Smart Contracts & No & Yes & Yes \\
+Key Management & DPKI & DPKI & Ethereum Addresses \\
+Verification & Permissioned & Permissionless & Permissionless  \\
+\hline
+\end{tabular}
+\caption[Comparison of SSI Systems]{Tabular comparison of Self-Sovereign Identity Systems currently available}
+\label{tbl:SSIS}
+\end{center}
+\end{table}
